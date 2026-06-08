@@ -4,7 +4,7 @@ set -euo pipefail
 # =========================
 # SETUP
 # =========================
-source "$(dirname "${BASH_SOURCE[0]}")/../../env.sh"
+source "$(dirname "${BASH_SOURCE[0]}")/../env.sh"
 
 # =========================
 # FUNCTIONS

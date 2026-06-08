@@ -4,7 +4,7 @@ set -euo pipefail
 # =========================
 # SETUP
 # =========================
-source "$(dirname "${BASH_SOURCE[0]}")/../../env.sh"
+source "$(dirname "${BASH_SOURCE[0]}")/../env.sh"
 source "$(dirname "${BASH_SOURCE[0]}")/../utils/install_cli.sh"
 source "$(dirname "${BASH_SOURCE[0]}")/../utils/detect_missing_cli.sh"
 
