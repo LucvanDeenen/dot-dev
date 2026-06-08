@@ -1,0 +1,5 @@
+# Custom ignores
+.active
+.idea
+.vs*
+.claude
