@@ -45,9 +45,6 @@ dot-conf/
 │       │   └── *.sh                # Any additional alias files
 │       └── functions/
 │           └── *.sh                # Shell functions
-├── aws/
-│   └── .aws/
-│       └── config                  # AWS CLI profiles & SSO config
 ├── nuget/
 │   └── nuget.tar.gz                # NuGet CLI binary (Windows)
 └── ocp/
