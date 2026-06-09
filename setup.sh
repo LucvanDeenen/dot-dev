@@ -8,6 +8,7 @@ SOURCE_DIR="$(dirname "${BASH_SOURCE[0]}")"
 # =========================
 chmod +x "$SOURCE_DIR/app/env.sh"
 source "$SOURCE_DIR/app/env.sh"
+source "$SOURCE_DIR/app/utils/check_conf.sh"
 source "$SOURCE_DIR/app/utils/detect_os.sh"
 source "$SOURCE_DIR/app/utils/detect_missing_cli.sh"
 source "$SOURCE_DIR/app/utils/select_scripts.sh"
@@ -19,6 +20,7 @@ source "$SOURCE_DIR/app/src/register_alias.sh"
 # =========================
 # MAIN
 # =========================
+check_conf
 pre_menu
 verify_winget
 

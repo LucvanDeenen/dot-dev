@@ -4,21 +4,21 @@ set -euo pipefail
 # =========================
 # SETUP
 # =========================
-source "$(dirname "${BASH_SOURCE[0]}")/../../env.sh"
+source "$(dirname "${BASH_SOURCE[0]}")/../env.sh"
 source "$(dirname "${BASH_SOURCE[0]}")/../utils/install_cli.sh"
 source "$(dirname "${BASH_SOURCE[0]}")/../utils/detect_missing_cli.sh"
 
 # =========================
 # CONFIG
 # =========================
-CLI_FOLDER="$CONFIG_FOLDER/aws"
+OCP_FOLDER="$CONFIG_FOLDER/ocp"
 DEST_DIR="$HOME"
 
 # =========================
 # FUNCTIONS
 # =========================
 setup_ocp() {
-  setup_cli_from_tar "oc" "$CONFIG_FOLDER/ocp/oc.tar.gz" "$HOME/bin"
+  setup_cli_from_tar "oc" "$OCP_FOLDER/oc.tar.gz" "$HOME/bin"
 }
 
 # =========================
@@ -44,17 +44,3 @@ case "$(uname -s)" in
     echo "No installation provided."
     ;;
 esac
-
-
-echo "Setting up AWS Config..."
-echo "Source: '$CLI_FOLDER'"
-echo "Destination: '$DEST_DIR'"
-
-# Ensure source exists
-if [ ! -d "$CLI_FOLDER" ]; then
-  echo "CLI config folder not found: $CLI_FOLDER"
-  exit 1
-fi
-
-# Copy all files/folders from $CLI_FOLDER into home
-cp -a "$CLI_FOLDER/." "$DEST_DIR/"

@@ -4,7 +4,7 @@ set -euo pipefail
 # =========================
 # SETUP
 # =========================
-source "$(dirname "${BASH_SOURCE[0]}")/../../env.sh"
+source "$(dirname "${BASH_SOURCE[0]}")/../env.sh"
 source "$(dirname "${BASH_SOURCE[0]}")/../utils/create_icon.sh"
 source "$(dirname "${BASH_SOURCE[0]}")/../utils/pin_quick_access.sh"
 
