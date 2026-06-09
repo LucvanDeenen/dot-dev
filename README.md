@@ -100,24 +100,6 @@ alias gs='git status'
 
 Add as many `*.sh` files under `alias/` and `functions/` as you like — they are all sourced automatically.
 
-### aws/
-
-AWS CLI configuration copied into `$HOME`. Uses SSO-based profiles.
-
-**`aws/.aws/config`:**
-
-```ini
-[profile my-profile]
-sso_session     = my-sso
-sso_account_id  = 123456789012
-sso_role_name   = MyRole
-region          = eu-central-1
-
-[sso-session my-sso]
-sso_start_url   = https://my-org.awsapps.com/start
-sso_region      = eu-central-1
-```
-
 ### nuget/ and ocp/
 
 Place the CLI binaries as `.tar.gz` archives. They are extracted into `$HOME/bin` during setup.
