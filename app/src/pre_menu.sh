@@ -3,16 +3,15 @@
 pre_menu() {
   clear
   echo "# === dot-dev =========================="
-  echo
   echo " [1] project"
   echo " [2] setup"
-  echo
   read -rp "> Your choice: " choice
   echo
 
   case "$choice" in
     1)
       echo "Opening shell in: $ROOT_DIR"
+      git -C "$DOT_CONF_DIR" pull
       cd "$ROOT_DIR"
       git pull
       clear
@@ -20,6 +19,7 @@ pre_menu() {
       ;;
     2)
       echo "Pulling latest changes..."
+      git -C "$DOT_CONF_DIR" pull
       git -C "$ROOT_DIR" pull
       clear
       echo

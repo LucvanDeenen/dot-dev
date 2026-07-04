@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-for f in "$HOME/.cli/alias/"*.sh; do [ -f "$f" ] && source "$f"; done
-for f in "$HOME/.cli/functions/"*.sh; do [ -f "$f" ] && source "$f"; done
